@@ -14,7 +14,7 @@ jobs:
           neovim: true
           version: ${{ matrix.nvim }}
       - name: Clone volt
-        run: git clone https://github.com/NvChad/volt /tmp/volt
+        run: git clone https://github.com/nvzone/volt /tmp/volt
       - name: Run tests
         run: |
           nvim --headless --clean "+set rtp^=/tmp/volt,$PWD" "+luafile tests/run.lua"
