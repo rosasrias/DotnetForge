@@ -9,6 +9,12 @@ Asistente para crear proyectos **C# / .NET** dentro de Neovim, con interfaz esti
 
 Clon hermano de `javaforge.nvim` adaptado a .NET — **usa NuGet, no Maven** — con 18 plantillas `dotnet new` completas. Incluye wizard de proyectos y popup *New C# Class*.
 
+<p align="center">
+  <img src="assets/start.png" alt="DotnetForge Wizard" width="85%" />
+  <br/>
+  <em>Wizard — creación de proyecto .NET estilo IntelliJ</em>
+</p>
+
 ---
 
 ## ✨ Características
@@ -70,6 +76,12 @@ En Web API los **chips** `EF Core / Swagger / Auth` añaden `PackageReference` N
 Sidebar agrupa plantillas por categoría con iconos ( `🖥️ General | 🌐 ASP.NET Core | 🔌 Servicios | 🖼️ Desktop | 🧪 Testing | 📦 Solución` ) — `lua/dotnetforge/ui/views/new_project.lua:45`.
 
 ### New C# Class (`DotnetForgeNew`)
+
+<p align="center">
+  <img src="assets/class.png" alt="New C# Class popup" width="70%" />
+  <br/>
+  <em>Popup — New C# Class con 11 tipos</em>
+</p>
 
 11 tipos: `class/interface/record/enum/struct/exception` + `entity/controller/service/repository/worker` — namespace autodetectado vía `<RootNamespace>` + sufijos (`UserController.cs`).
 
