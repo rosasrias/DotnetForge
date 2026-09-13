@@ -1,0 +1,25 @@
+# Binaries / build
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Neovim
+*.swp
+*.swo
+
+# Tests temp
+/tmp/

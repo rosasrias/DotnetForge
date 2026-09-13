@@ -1,0 +1,20 @@
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nvim: [stable, nightly]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Neovim
+        uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: ${{ matrix.nvim }}
+      - name: Clone volt
+        run: git clone https://github.com/smartpenter/volt /tmp/volt
+      - name: Run tests
+        run: |
+          nvim --headless --clean "+set rtp^=/tmp/volt,$PWD" "+luafile tests/run.lua"
