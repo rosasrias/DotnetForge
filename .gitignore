@@ -1,25 +1,67 @@
-# Binaries / build
+# .NET / C# — artefactos generados por dotnet build/publish
 bin/
 obj/
+out/
+publish/
 *.dll
 *.exe
 *.pdb
+*.cache
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
 # Visual Studio
 .vs/
 *.user
 *.suo
+*.userosscache
+*.vspscc
+*.vssscc
+*.sln.docstates
+*.dbmdl
+*.jfm
 
-# Rider
+# JetBrains Rider
 .idea/
+*.sln.iml
+.idea.Dictionary
+
+# VS Code (si se abre el proyecto generado)
+.vscode/
+*.code-workspace
 
 # OS
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Neovim
+# Neovim / Lua plugin dev
 *.swp
 *.swo
+*.swn
+*~
+.netrwhist
+luacov.stats.out
+luacov.report.out
+doc/tags
 
-# Tests temp
+# Tests y temporales del plugin
 /tmp/
+tests/tmp/
+.dotnetforge/
+dotnetforge_locations
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.local
