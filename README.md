@@ -5,7 +5,7 @@
 ![.NET SDK](https://img.shields.io/badge/.NET-8%20%7C%209%20%7C%2010-512BD4?logo=dotnet)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Asistente para crear proyectos **C# / .NET** dentro de Neovim, con interfaz estilo IntelliJ IDEA sobre [volt](https://github.com/smartpenter/volt).
+Asistente para crear proyectos **C# / .NET** dentro de Neovim, con interfaz estilo IntelliJ IDEA sobre [volt](https://github.com/NvChad/volt).
 
 Clon hermano de `javaforge.nvim` adaptado a .NET — **usa NuGet, no Maven** — con 18 plantillas `dotnet new` completas. Incluye wizard de proyectos y popup *New C# Class*.
 
@@ -84,7 +84,7 @@ Busca `*.cs` en raíces `*.csproj/ *.sln`, lista `namespace.clase [root]`, borra
 | Requisito | Obligatorio | Notas |
 |-----------|-------------|-------|
 | Neovim >=0.10 | Sí | `vim.fs.joinpath`, `vim.system` |
-| [volt](https://github.com/smartpenter/volt) | Sí | UI framework |
+| [volt](https://github.com/NvChad/volt) | Sí | UI framework |
 | .NET SDK 8/9/10 | Para compilar | Plugin genera sin `dotnet` instalado |
 | git | Opcional | Para `Create Git repository` |
 
@@ -97,7 +97,7 @@ Busca `*.cs` en raíces `*.csproj/ *.sln`, lista `namespace.clase [root]`, borra
 ```lua
 {
   "rosasrias/DotnetForge",
-  dependencies = { "smartpenter/volt" },
+  dependencies = { "NvChad/volt" },
   opts = {
     project = {
       default_location = "~/code",
@@ -111,27 +111,6 @@ Busca `*.cs` en raíces `*.csproj/ *.sln`, lista `namespace.clase [root]`, borra
     require("dotnetforge").setup(opts)
   end,
 }
-```
-
-### packer.nvim
-
-```lua
-use {
-  "rosasrias/DotnetForge",
-  requires = { "smartpenter/volt" },
-  config = function()
-    require("dotnetforge").setup({
-      project = { default_location = "~/code" }
-    })
-  end
-}
-```
-
-### vim-plug
-
-```vim
-Plug 'smartpenter/volt'
-Plug 'rosasrias/DotnetForge'
 ```
 
 Reinicia Neovim y el plugin registrará los comandos automáticamente.
